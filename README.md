@@ -120,7 +120,7 @@ tcp_scan example.com 1 1024
 To display the built-in help menu:
 
 ```bash
-menu
+help_page
 ```
 
 ## Notes
