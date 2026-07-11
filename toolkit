@@ -106,14 +106,14 @@ local length="${#HASH}"
 
 if [[ "$HASH" =~  ^[0-9a-fA-F]+$ ]]; then
 
-   [[ $length -eq 8  ]] && printf "${GREEN} [ $hash ] hash type: CRC32${NC}\n"
-   [[ $length -eq 32 ]] && printf "${GREEN} [ $hash ] hash type: MD5 or NTLM${NC}\n"
-   [[ $length -eq 40 ]] && printf "${GREEN} [ $hash ] hash type: SHA1 or RipeMD-160${NC}\n"
-   [[ $length -eq 56 ]] && printf "${GREEN} [ $hash ] hash type: SHA224${NC}\n"
-   [[ $length -eq 60 ]] && printf "${GREEN} [ $hash ] hash type: bcrypt${NC}\n"
-   [[ $length -eq 64 ]] && printf "${GREEN} [ $hash ] hash type: SHA256 or SHA3-256${NC}\n"
-   [[ $length -eq 96 ]] && printf "${GREEN} [ $hash ] hash type: SHA384${NC}\n"
-   [[ $length -eq 128 ]] && printf "${GREEN} [ $hash ] hash type: SHA512 or Whirlpool$NC}\n"
+   [[ $length -eq 8  ]] && printf "${GREEN} [ $HASH ] hash type: CRC32${NC}\n"
+   [[ $length -eq 32 ]] && printf "${GREEN} [ $HASH ] hash type: MD5 or NTLM${NC}\n"
+   [[ $length -eq 40 ]] && printf "${GREEN} [ $HASH ] hash type: SHA1 or RipeMD-160${NC}\n"
+   [[ $length -eq 56 ]] && printf "${GREEN} [ $HASH ] hash type: SHA224${NC}\n"
+   [[ $length -eq 60 ]] && printf "${GREEN} [ $HASH ] hash type: bcrypt${NC}\n"
+   [[ $length -eq 64 ]] && printf "${GREEN} [ $HASH ] hash type: SHA256 or SHA3-256${NC}\n"
+   [[ $length -eq 96 ]] && printf "${GREEN} [ $HASH ] hash type: SHA384${NC}\n"
+   [[ $length -eq 128 ]] && printf "${GREEN} [ $HASH ] hash type: SHA512 or Whirlpool$NC}\n"
    [[ $length -gt 128 ]] && printf "${PURPLE}[*] Unknown hash type..${NC}"
 else
      printf "${PURPLE}[!] error: not a valid hexadecimal string\n${NC}"
